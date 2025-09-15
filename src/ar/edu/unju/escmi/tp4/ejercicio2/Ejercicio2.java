@@ -9,7 +9,7 @@ public class Ejercicio2 {
         Scanner sc = new Scanner(System.in);
         HashMap<String, Empleado> empleados = new HashMap<>();
 
-        int opcion;
+        byte op;
         do {
             System.out.println("\n **** Menu de Opciones ****");
             System.out.println("1 - Alta de empleado");
@@ -18,10 +18,10 @@ public class Ejercicio2 {
             System.out.println("4 - Consultar empleado");
             System.out.println("5 - Salir");
             System.out.print("Ingrese una opcion: ");
-            opcion = sc.nextInt();
+            op = sc.nextByte();
             sc.nextLine(); // limpiar buffer
 
-            switch (opcion) {
+            switch (op) {
                 case 1: // Alta
                     System.out.print("Ingrese DNI: ");
                     String dni = sc.nextLine();
@@ -77,7 +77,7 @@ public class Ejercicio2 {
                 default:
                     System.out.println("Opción inválida.");
             }
-        } while (opcion != 5);
+        } while (op != 5);
 
         sc.close();
     }

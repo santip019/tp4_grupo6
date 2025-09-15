@@ -54,7 +54,7 @@ public class Empleado {
     public void setCategoria(char categoria){ 
         this.categoria = categoria;
     }
-    // tostring ---> va a ser la forma en la que se muestre el producto
+    // tostring ---> va a ser la forma en la que se muestre el empleado
     public String toString() {
         return "Empleado{" +
         "dni='" + dni + '\'' +
