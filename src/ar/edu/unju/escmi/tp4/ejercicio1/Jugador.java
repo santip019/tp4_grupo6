@@ -7,6 +7,16 @@ public class Jugador {
     private String nacionalidad;
     private float estatura;
 
+    // Constructor por defecto (sin parámetros)
+    public Jugador() {
+        this.dni = 0;
+        this.nombre = "";
+        this.equipo = "";
+        this.nacionalidad = "";
+        this.estatura = 0.0f;
+    }
+
+    // Constructor con parámetrizado para inicializar los atributos
     public Jugador(int dni, String nombre, String equipo, String nacionalidad, float estatura) {
         this.dni = dni;
         this.nombre = nombre;
@@ -47,6 +57,10 @@ public class Jugador {
     }
 
     // Setters: Métodos para modificar los valores de los atributos
+    public void setDni(int dni) {
+        this.dni = dni;
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

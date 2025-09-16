@@ -26,24 +26,27 @@ public class Ejercicio1 {
 
             switch (op) {
                 case 1:
+                    // Se crea el objeto usando el constructor por defecto
+                    Jugador j = new Jugador();
+
                     System.out.print("Ingrese el DNI del jugador: ");
-                    int dni = sc.nextInt();
+                    j.setDni(sc.nextInt());
+                    sc.nextLine();
 
                     System.out.print("Ingrese el nombre del jugador: ");
-                    String nombre = sc.next();
+                    j.setNombre(sc.nextLine());
 
                     System.out.print("Ingrese el equipo del jugador: ");
-                    String equipo = sc.next();
+                    j.setEquipo(sc.nextLine());
 
                     System.out.print("Ingrese la nacionalidad del jugador: ");
-                    String nacionalidad = sc.next();
+                    j.setNacionalidad(sc.nextLine());
 
                     System.out.print("Ingrese la estatura del jugador: ");
-                    float estatura = sc.nextFloat();
+                    j.setEstatura(sc.nextFloat());
 
                     sc.nextLine(); // Consumir la nueva línea después de nextFloat()
 
-                    Jugador j = new Jugador(dni, nombre, equipo, nacionalidad, estatura);
                     jugadores.add(j);
 
                     System.out.println("El jugador fue agregado exitosamente.");
@@ -141,6 +144,8 @@ public class Ejercicio1 {
                     break;
             }
         } while (op != 7);
+
+        sc.close();
 
     }
 }
